@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.filter {
+  position: relative;
+  cursor: pointer;
+
+  &:hover &__content,
+  &:active &__content {
+    display: block;
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 16rem;
+  }
+
+  &__link {
+    background-color: $color-grey-light-2;
+    color: $color-grey;
+    padding: 1.6rem;
+    width: 100%;
+
+    &:is(:hover, :active) {
+      background-color: #fff;
+    }
+  }
+}

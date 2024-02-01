@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap");
+/*
+$breakpoint Argument auswahl:
+- large   = 900px / 16px  => 65.25em
+- medium  = 610px / 16px  => 38.1em
+- small   = 460px / 16px  => 28.75em
+*/
+.btn--check:hover, .btn--edit:hover, .btn--delete:hover {
+  background-color: hsla(var(--color-grey-light-2-hsl), alpha);
+}
+
+.btn {
+  border-radius: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 1.6rem 2.4rem;
+}
+.btn svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: #fff;
+}
+.btn--add {
+  background-color: var(--color-secondary);
+}
+.btn--add:hover {
+  opacity: 0.8;
+}
+.btn--delete-select {
+  padding: 1.2rem;
+  background-color: var(--color-grey-light-2);
+}
+.btn--delete-select:hover {
+  background-color: var(--color-grey);
+  color: #fff;
+}
+.btn--check {
+  background-color: var(--color-grey);
+}
+.btn--edit {
+  background-color: var(--color-secondary);
+}
+.btn--delete {
+  background-color: var(--color-grey-light-2);
+}
+
+.heading-primary {
+  font-size: 4.4rem;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+/* 
+= SYSTEM =
+
+- Font sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+:root {
+  --color-primary: #fcc419;
+  --color-primary-light: #ffdb6d;
+  --color-secondary: #5c1eab;
+  --color-grey: #343a40;
+  --color-grey-light-1: #fff6d8;
+  --color-grey-light-2: #dee2e6;
+  --color-grey-light-2-hsl: hsl(210, 14%, 89%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-grey);
+  background-color: var(--color-primary);
+  padding: 0.8rem;
+}
+
+svg {
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+input {
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container__content {
+  width: 65rem;
+  max-width: 65rem;
+  background-color: var(--color-grey-light-1);
+  padding: 2.4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.new-entry {
+  margin-bottom: 2.4rem;
+  display: flex;
+  gap: 1.2rem;
+}
+.new-entry__input {
+  padding: 1.2rem 1.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  border-top: 2px solid var(--color-grey);
+  border-right: 2px solid var(--color-grey-light-2);
+  border-bottom: 2px solid var(--color-grey-light-2);
+  border-left: 2px solid var(--color-grey);
+  border-radius: 0.8rem;
+  flex: 1;
+}
+
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+  gap: 1.2rem;
+}
+.entry-list__entry {
+  background-color: var(--color-primary);
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+.entry-list__text {
+  font-size: 2rem;
+  font-weight: 500;
+  flex: 1;
+}
+.entry-list__menu {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.filter-selected {
+  font-size: 1.8rem;
+  color: var(--color-grey);
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+}
+.filter__dropdown {
+  position: relative;
+}
+.filter__title {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+}
+.filter__dropdown-content {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 16rem;
+}
+.filter__dropdown-link {
+  background-color: var(--color-grey-light-2);
+  color: var(--color-grey);
+  padding: 1.6rem;
+  width: 100%;
+}
+.filter__dropdown-link:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=main.css.map */

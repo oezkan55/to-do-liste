@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+
+.btn {
+  border-radius: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 1.2rem 1.6rem;
+  color: #fff;
+
+  svg {
+    width: 1.7rem;
+    height: 1.7rem;
+    fill: currentColor;
+  }
+
+  &--add {
+    background-color: $color-secondary;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &--selection {
+    padding: 1.2rem;
+    background-color: $color-grey-light-2;
+    color: $color-grey;
+
+    &:hover {
+      background-color: $color-grey;
+      color: #fff;
+    }
+  }
+
+  &--complete {
+    background-color: $color-secondary;
+    @include menu-btn-hover(var(--color-secondary));
+  }
+
+  &--edit {
+    background-color: $color-grey;
+    @include menu-btn-hover(var(--color-grey));
+  }
+
+  &--delete {
+    background-color: $color-grey-dark-1;
+    @include menu-btn-hover(var(--color-grey-dark-1));
+  }
+
+  &--filter {
+    background-color: $color-secondary;
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+
+    &:is(:hover, :active) {
+      background-color: $color-grey-light-2;
+      color: $color-secondary;
+    }
+  }
+}

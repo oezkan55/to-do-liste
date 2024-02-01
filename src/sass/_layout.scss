@@ -1,0 +1,65 @@
+@use "abstracts" as *;
+
+//*?+*+*+*+====== !ANCHOR Container =====+*+*+*+*/
+.container {
+  min-height: 100vh; //? Fallback
+  min-height: 100svh;
+  padding: 0.8rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary,
+    $color-primary-dark
+  );
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//*?+*+*+*+====== !ANCHOR App =====+*+*+*+*/
+.app {
+  //? damit "Overflov Ellypse" bei .entry__text funktioniert
+  min-width: 0;
+
+  max-width: 55rem;
+  background-color: $color-grey-light-1;
+  padding: 2.4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+
+  flex: 1;
+}
+
+//*?+*+*+*+====== !ANCHOR Header =====+*+*+*+*/
+.header {
+  text-align: center;
+  margin-bottom: 3.2rem;
+
+  &__heading {
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+  }
+}
+
+//*?+*+*+*+====== !ANCHOR Delete-Selection =====+*+*+*+*/
+.delete-selection {
+  font-size: 1.4rem;
+  color: $color-grey;
+  margin-bottom: 1.6rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+//*?+*+*+*+====== !ANCHOR Footer =====+*+*+*+*/
+.footer {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+}

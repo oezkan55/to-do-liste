@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>To-do-Liste</title>
+
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script type="module" src="src/js/script.js"></script>
+  </head>
+  <body class="container">
+    <main class="app">
+      <header class="header">
+        <h1 class="header__heading">To-do-Liste</h1>
+
+        <form action="#" class="new-entry">
+          <input
+            class="new-entry__input"
+            type="text"
+            placeholder="📑 Füge eine Aufgabe hinzu..."
+            required
+          />
+          <button class="btn btn--add" title="Neuer Eintrag">
+            <svg>
+              <use href="src/img/icons/sprite.svg#icon-add" />
+            </svg>
+          </button>
+        </form>
+      </header>
+
+      <div class="delete-selection">
+        <button class="btn btn--selection btn--delete-completed">
+          Erledigte löschen
+        </button>
+        <button class="btn btn--selection btn--delete-all">Alle löschen</button>
+      </div>
+
+      <ul class="list"></ul>
+
+      <footer class="footer">
+        <div class="filter">
+          <button class="btn btn--filter">Filtern</button>
+          <ul class="filter__content">
+            <li>
+              <a data-filter="all" href="#" class="filter__link">Alle</a>
+            </li>
+            <li>
+              <a data-filter="pending" href="#" class="filter__link"
+                >Austehend</a
+              >
+            </li>
+            <li>
+              <a data-filter="complete" href="#" class="filter__link"
+                >Erledigt</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <p>Erledigt: <span class="filter__completed">0</span></p>
+        <p>Alle Aufgaben: <span class="filter__all">0</span></p>
+      </footer>
+    </main>
+
+    <!--?=== Damit "touch" Funktionalität auf Iphone/Mac funktioniert  ===-->
+    <script defer>
+      document.addEventListener("touchstart", function () {}, true);
+    </script>
+  </body>
+</html>

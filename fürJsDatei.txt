@@ -1,0 +1,35 @@
+{
+  "name": "????",
+  "version": "1.0.0",
+  "description": "???",
+  "default": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Alibey",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^??",
+    "parcel": "^??"
+  }
+}
+
+!Anweisungen für Terminal!
+
+- Prüfen ob node installiert ist
+-> node -v
+
+- Projekt starten
+-> npm init
+-> danach mehrmals mit Enter bestätigen
+
+- Paket intalieren als "devDependencies" (Entwicklerabhängigkeiten)
+-> npm install node-sass --save-dev
+
+- Alle Pakete Neu installieren
+-> npm install

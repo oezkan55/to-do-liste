@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+.list {
+  margin-bottom: 3.2rem;
+  max-height: 44vh;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  &__entry {
+    background-color: $color-primary;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    border: 2px dotted transparent;
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    &--drop-target {
+      border: 2px dotted $color-secondary;
+    }
+  }
+
+  &__text {
+    user-select: none;
+    background-color: inherit;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.4rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    flex: 1;
+
+    &:hover {
+      cursor: grab;
+    }
+
+    &--completed {
+      text-decoration: line-through;
+      text-decoration-thickness: 3px;
+    }
+
+    &--drag {
+      opacity: 0;
+    }
+
+    &--touch {
+      z-index: 5;
+      position: absolute;
+      text-shadow: 0 0 3px $color-secondary;
+      transform: scale(1.05);
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+
+    display: flex;
+    gap: 1.2rem;
+  }
+}
